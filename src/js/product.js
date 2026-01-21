@@ -6,7 +6,7 @@ const dataSource = new ProductData("tents");
 const productID = getParam("product");
 
 const product = new ProductDetails(productID, dataSource);
-product.init()
+product.init();
 
 // // add to cart button event handler
 // async function addToCartHandler(e) {

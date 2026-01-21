@@ -29,14 +29,13 @@ const cartButton = document.getElementById("cartButton");
 function removeItemsFromCart() {
   let cartItems = getLocalStorage("so-cart");
   if (cartItems) {
-    localStorage.removeItem("so-cart")
+    localStorage.removeItem("so-cart");
 
-    renderCartContents()
+    renderCartContents();
   } else {
-    return
+    return;
   }
 }
-cartButton.addEventListener("click", removeItemsFromCart)
-
+cartButton.addEventListener("click", removeItemsFromCart);
 
 renderCartContents();
