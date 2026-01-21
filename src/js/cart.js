@@ -25,4 +25,18 @@ function cartItemTemplate(item) {
   return newItem;
 }
 
+const cartButton = document.getElementById("cartButton");
+function removeItemsFromCart() {
+  let cartItems = getLocalStorage("so-cart");
+  if (cartItems) {
+    localStorage.removeItem("so-cart")
+
+    renderCartContents()
+  } else {
+    return
+  }
+}
+cartButton.addEventListener("click", removeItemsFromCart)
+
+
 renderCartContents();
