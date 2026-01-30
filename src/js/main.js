@@ -6,6 +6,6 @@ const dataSource = new ProductData("tents");
 const listElement = document.querySelector(".product-list");
 const listing = new ProductList("tents", dataSource, listElement);
 
-loadHeaderFotter()
+loadHeaderFotter();
 
 listing.init();

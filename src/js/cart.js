@@ -19,7 +19,7 @@ import ShoppingCart from "./ShoppingCart.mjs";
 //   return newItem;
 // }
 
-const cart = new ShoppingCart("so-cart", document.querySelector(".cart-list"))
+const cart = new ShoppingCart("so-cart", document.querySelector(".cart-list"));
 
 cart.init();
 
