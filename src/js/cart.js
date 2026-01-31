@@ -1,4 +1,5 @@
 import ShoppingCart from "./ShoppingCart.mjs";
+import { getCartTotalValue } from "./utils.mjs";
 
 // function cartItemTemplate(item) {
 //   const newItem = `<li class="cart-card divider">
@@ -27,3 +28,8 @@ const cartButton = document.getElementById("cartButton");
 cartButton.addEventListener("click", () => {
   cart.clearCart();
 });
+
+const totalElement = document.getElementById("totalValue");
+const totalValue = getCartTotalValue();
+
+totalElement.innerHTML = `U$${totalValue}`

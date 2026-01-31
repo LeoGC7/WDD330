@@ -54,12 +54,26 @@ export async function loadTemplate(path) {
 }
 
 export async function loadHeaderFotter() {
-  const headerTemplate = await loadTemplate("../partials/header.html");
-  const footerTemplate = await loadTemplate("../partials/footer.html");
+  const headerTemplate = await loadTemplate("/partials/header.html");
+  const footerTemplate = await loadTemplate("/partials/footer.html");
 
   const headerElement = document.getElementById("main-header");
   const footerElement = document.getElementById("main-footer")
 
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
+}
+
+export function getCartTotalValue() {
+    let totalValue = 0;
+
+  const cartItems = getLocalStorage("so-cart")
+
+  cartItems.forEach(item => {
+    const price = item.FinalPrice;
+
+    totalValue += price;
+  });
+
+  return totalValue;
 }

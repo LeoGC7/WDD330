@@ -136,6 +136,20 @@ button:hover {
   fill: gray;
 }
 
+.total-price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.total-text, .total-value {
+  font-size: 1.7rem;
+}
+
+.total-value {
+  font-weight: bold;
+}
+
 /* End cart icon styles */
 
 .mission {
