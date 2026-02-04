@@ -118,7 +118,6 @@ button:hover {
 .divider {
   border-bottom: 2px solid var(--primary-color);
 }
-
 /* End utility classes */
 
 /* Cart icon styles */
@@ -149,9 +148,9 @@ button:hover {
 .total-value {
   font-weight: bold;
 }
-
 /* End cart icon styles */
 
+/* src index.html styles */
 .mission {
   position: absolute;
   top: 1rem;
@@ -186,6 +185,32 @@ button:hover {
   text-decoration: none;
   color: var(--dark-grey);
 }
+
+.products-category-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.product-category-item {
+  text-decoration: none;
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-category-image {
+  width: 75px;
+}
+
+.product-category-item h2 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* End src index.html styles */
 
 /* Styles for product lists */
 .product-card {

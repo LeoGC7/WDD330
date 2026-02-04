@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+import { getLocalStorage, setLocalStorage, renderWithTemplate } from "./utils.mjs";
 
 export default class ProductDetails {
   constructor(productId, dataSource) {
@@ -20,8 +20,9 @@ export default class ProductDetails {
     setLocalStorage("so-cart", cartItems);
   }
   renderProductDetails() {
-    const element = document.querySelector("main");
-    element.innerHTML = productDetailsTemplate(this.product);
+    const productContainer = document.getElementById("product-container");
+    const template = productDetailsTemplate(this.product);
+    renderWithTemplate(template, productContainer);
   }
 }
 
@@ -30,7 +31,7 @@ function productDetailsTemplate(product) {
     <h2 class="divider">${product.NameWithoutBrand}</h2>
     <img
       class="divider"
-      src="${product.Image}"
+      src="${product.Images.PrimaryLarge}"
       alt="${product.NameWithoutBrand}"
     />
     <p class="product-card__price">$${product.FinalPrice}</p>
